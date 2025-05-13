@@ -19,28 +19,28 @@ export const FinalReview = ({ onBack }: { onBack: () => void }) => {
   return (
     <div>
       <h2 className="text-xl font-semibold mb-4">Final Review</h2>
-      <div className="bg-gray-50 rounded p-4 mb-4">
-        <div className="mb-2">
+      <div className="bg-gray-50 rounded p-4 mb-4 grid grid-cols-2">
+        <div className="mb-2 flex flex-col items-start">
           <span className="font-medium">Bank Name:</span>{" "}
           {bank || <span className="text-red-500">Not provided</span>}
         </div>
-        <div className="mb-2">
+        <div className="mb-2 flex flex-col items-start">
           <span className="font-medium">Bank Branch Name:</span>{" "}
           {branch || <span className="text-red-500">Not provided</span>}
         </div>
-        <div className="mb-2">
+        <div className="mb-2 flex flex-col items-start">
           <span className="font-medium">Account Name:</span>{" "}
           {accountName || <span className="text-red-500">Not provided</span>}
         </div>
-        <div className="mb-2">
+        <div className="mb-2 flex flex-col items-start">
           <span className="font-medium">Account Name:</span>{" "}
           {accountName || <span className="text-red-500">Not provided</span>}
         </div>
-        <div className="mb-2">
+        <div className="mb-2 flex flex-col items-start">
           <span className="font-medium">Account Number:</span>{" "}
           {accountNumber || <span className="text-red-500">Not provided</span>}
         </div>
-        <div className="mb-2">
+        <div className="mb-2 flex flex-col items-start">
           <span className="font-medium">Proof of Bank Account:</span>{" "}
           {proofFile ? (
             <span>{proofFile.name}</span>
@@ -48,10 +48,10 @@ export const FinalReview = ({ onBack }: { onBack: () => void }) => {
             <span className="text-red-500">Not uploaded</span>
           )}
         </div>
-        <Button variant="bordered" onPress={onBack}>
-          Back
-        </Button>
       </div>
+      <Button variant="bordered" onPress={onBack}>
+        Back
+      </Button>
     </div>
   );
 };
